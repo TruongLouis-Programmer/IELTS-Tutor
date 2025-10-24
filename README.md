@@ -28,7 +28,7 @@ All data is stored locally in your browser's `localStorage`. Clearing browser ca
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
+**Required:**  [Node.js](https://nodejs.org/)
 
 1. Download the zip [file](https://github.com/TruongLouis-Programmer/IELTS-Writing-Tutor/releases/tag/Universal) from the releases.
 2. Upack the file.
