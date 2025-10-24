@@ -3,6 +3,7 @@ A powerful and intuitive web application designed to help you excel in the IELTS
    <img width="2940" height="1592" alt="image" src="https://github.com/user-attachments/assets/ce94919b-5c11-41a5-9ffe-da90458f9969" />
 
 </div>
+
 - Instantly generate a wide variety of authentic IELTS Task 2 essay questions. You can also edit the topic or write your own.
 
 - Simulate the pressure of the real exam with a customizable timer. The application automatically submits your essay when the time runs out.
