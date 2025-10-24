@@ -29,11 +29,11 @@ All data is stored locally in your browser's `localStorage`. Clearing browser ca
 
 **Prerequisites:**  Node.js
 
-1. Download the zip file[https://github.com/TruongLouis-Programmer/IELTS-Writing-Tutor/releases/tag/Universal] from releases.
+1. Download the zip file from the releases: [https://github.com/TruongLouis-Programmer/IELTS-Writing-Tutor/releases/tag/Universal]
 2. Upack the file.
 4. Install dependencies:
    `npm install`
 5. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 6. Run the app:
    `npm run dev`
-7. Visit http://localhost:3000/[http://localhost:3000/] to access the app.
+7. Visit [http://localhost:3000/] to access the app.
