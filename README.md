@@ -1,5 +1,4 @@
-A powerful and intuitive web application designed to help you excel in the IELTS Academic Writing Task 2. Powered by the Google Gemini API, this tool provides a comprehensive practice environment that simulates exam conditions and delivers intelligent, actionable feedback to help you improve your band score.
-<div align="center">
+A powerful and intuitive web application designed to help you excel in the IELTS Academic Writing Task 2. Powered by the Google Gemini API.
    <img width="2940" height="1592" alt="image" src="https://github.com/user-attachments/assets/ce94919b-5c11-41a5-9ffe-da90458f9969" />
 
 </div>
