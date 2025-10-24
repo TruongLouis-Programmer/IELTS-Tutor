@@ -8,7 +8,8 @@ A powerful and intuitive web application designed to help you excel in the IELTS
 - Simulate the pressure of the real exam with a customizable timer. The application automatically submits your essay when the time runs out.
 
 - As you write, you can request instant feedback. The AI provides an estimated band score, highlights grammatical errors, and offers a concise hint for improvement without disrupting your flow.
-<img width="2940" height="1568" alt="image" src="https://github.com/user-attachments/assets/58bb7744-0bc2-48af-80a1-a4428542347a" />
+<img width="2940" height="1494" alt="image" src="https://github.com/user-attachments/assets/2ef57b7a-981a-4656-966d-675444bf2a6e" />
+
 
 - Upon submission, receive a comprehensive report that breaks down your performance based on the four official IELTS criteria:
   - Task Achievement
