@@ -34,7 +34,7 @@ All data is stored locally in your browser's `localStorage`. Clearing browser ca
 2. Upack the file.
 4. Install dependencies:
    `npm install`
-5. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+5. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key (The application already includes a pre-configured API key; however, the rate limit may occasionally be exceeded, resulting in failed processing. You may wish to add your own API key to ensure more reliable performance.)
 6. Run the app:
    `npm run dev`
 7. Visit [localhost](http://localhost:3000/) to access the app.
