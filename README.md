@@ -1,5 +1,6 @@
 <div align="center">
-   <img width="2940" height="1592" alt="image" src="https://github.com/user-attachments/assets/75d10e8d-67cc-4608-96c3-3da1bcc5a837" />
+   <img width="2940" height="1592" alt="image" src="https://github.com/user-attachments/assets/ce94919b-5c11-41a5-9ffe-da90458f9969" />
+
 </div>
 
 ## Run Locally
