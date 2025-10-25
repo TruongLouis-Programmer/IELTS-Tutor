@@ -4,9 +4,10 @@ import React, { useState, useEffect } from 'react';
 interface TimerProps {
   initialSeconds: number;
   onTimeUp: () => void;
+  onTick?: (seconds: number) => void;
 }
 
-const Timer: React.FC<TimerProps> = ({ initialSeconds, onTimeUp }) => {
+const Timer: React.FC<TimerProps> = ({ initialSeconds, onTimeUp, onTick }) => {
   const [seconds, setSeconds] = useState(initialSeconds);
 
   useEffect(() => {
@@ -16,11 +17,17 @@ const Timer: React.FC<TimerProps> = ({ initialSeconds, onTimeUp }) => {
     }
 
     const intervalId = setInterval(() => {
-      setSeconds(prev => prev - 1);
+      setSeconds(prev => {
+          const newSeconds = prev - 1;
+          if (onTick) {
+              onTick(newSeconds);
+          }
+          return newSeconds;
+      });
     }, 1000);
 
     return () => clearInterval(intervalId);
-  }, [seconds, onTimeUp]);
+  }, [seconds, onTimeUp, onTick]);
 
   const formatTime = () => {
     const minutes = Math.floor(seconds / 60);

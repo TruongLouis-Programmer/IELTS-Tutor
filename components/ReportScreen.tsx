@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { DetailedFeedback } from '../types';
 import { CheckCircleIcon, XCircleIcon } from './Icons';
@@ -16,6 +15,13 @@ const ReportCard: React.FC<{ title: string; children: React.ReactNode }> = ({ ti
   </div>
 );
 
+const classificationColors: { [key: string]: string } = {
+  good: 'text-blue-400',
+  refinement: 'text-green-400',
+  error: 'text-red-400',
+  default: 'text-slate-300'
+};
+
 const ReportScreen: React.FC<ReportScreenProps> = ({ report, onHistory, onNewSession }) => {
   const { 
     overallBand, 
@@ -24,7 +30,8 @@ const ReportScreen: React.FC<ReportScreenProps> = ({ report, onHistory, onNewSes
     lexicalResource, 
     grammaticalRangeAndAccuracy, 
     strengths, 
-    areasForImprovement 
+    areasForImprovement,
+    sentenceFeedback
   } = report;
 
   return (
@@ -35,6 +42,41 @@ const ReportScreen: React.FC<ReportScreenProps> = ({ report, onHistory, onNewSes
         <p className="text-7xl font-bold text-cyan-400">{overallBand.toFixed(1)}</p>
         <p className="text-xl text-slate-300">Overall Band Score</p>
       </div>
+
+      {sentenceFeedback && sentenceFeedback.length > 0 && (
+        <ReportCard title="Color-Coded Analysis">
+          <p className="text-sm text-slate-400 mb-4">Hover over highlighted sentences to see specific feedback.</p>
+          
+          <div className="text-xs text-slate-400 mb-4 p-3 bg-slate-900 rounded-md space-y-2">
+              <div className="flex items-start gap-2">
+                  <span className="w-3 h-3 rounded-full bg-blue-400 flex-shrink-0 mt-1"></span>
+                  <div><span className="font-bold text-slate-300">Blue:</span> Exceptionally well-written</div>
+              </div>
+              <div className="flex items-start gap-2">
+                  <span className="w-3 h-3 rounded-full bg-green-400 flex-shrink-0 mt-1"></span>
+                  <div><span className="font-bold text-slate-300">Green:</span> Good but could be refined for better clarity or word choice</div>
+              </div>
+              <div className="flex items-start gap-2">
+                  <span className="w-3 h-3 rounded-full bg-red-400 flex-shrink-0 mt-1"></span>
+                  <div><span className="font-bold text-slate-300">Red:</span> Clear grammatical or structural errors</div>
+              </div>
+          </div>
+
+          <div className="bg-slate-900 p-4 rounded-lg whitespace-pre-wrap leading-relaxed">
+            {sentenceFeedback.map((item, index) => (
+              <React.Fragment key={index}>
+                <span 
+                  className={`${classificationColors[item.classification] || classificationColors.default} transition-colors duration-200 hover:bg-slate-700 rounded`}
+                  title={item.explanation}
+                >
+                  {item.sentence}
+                </span>
+                {' '}
+              </React.Fragment>
+            ))}
+          </div>
+        </ReportCard>
+      )}
 
       <div className="grid md:grid-cols-2 gap-6">
         <ReportCard title="Task Achievement">

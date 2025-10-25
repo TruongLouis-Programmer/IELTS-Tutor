@@ -1,5 +1,7 @@
 {
-  "name": "IELTS Writing Tutor AI",
-  "description": "An AI-powered application to help users practice for the IELTS writing exam. It features AI topic generation, timed practice sessions, real-time feedback, detailed post-session analysis, and progress tracking to help you improve your band score.",
-  "requestFramePermissions": []
+  "name": "IELTS Tutor AI",
+  "description": "An AI-powered application to help users practice for the IELTS exam. It features modules for Writing, Speaking, Listening, and Reading to help you improve your band score.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
 }

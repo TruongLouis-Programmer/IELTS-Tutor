@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { Essay } from '../types';
+// FIX: Corrected import path for type definitions.
+import { Essay } from './types';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { HistoryIcon } from './Icons';
+// FIX: Corrected import path for component moved to root directory.
+import { HistoryIcon } from './components/Icons';
 
 interface HistoryScreenProps {
   essays: Essay[];
@@ -51,7 +53,7 @@ const HistoryScreen: React.FC<HistoryScreenProps> = ({ essays, onNewSession }) =
             essays.slice().reverse().map(essay => (
               <div key={essay.id} className="bg-slate-900 p-4 rounded-lg cursor-pointer hover:bg-slate-700 transition-colors" onClick={() => setSelectedEssay(essay)}>
                 <div className="flex justify-between items-start">
-                  <div className="min-w-0">
+                  <div>
                     <p className="font-semibold text-slate-200 truncate pr-4">{essay.topic}</p>
                     <p className="text-sm text-slate-400">{new Date(essay.date).toLocaleString()}</p>
                   </div>
